@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Product | StyleHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">StyleHub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="checkout.html">Checkout (<span id="cart-count">0</span>)</a>
+        </nav>
+        <button id="cart-btn" class="nav-cart" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <img src="images/shirt.png" alt="Casual Shirt">
+
+        <div class="product-info">
+            <h2>Casual Shirt</h2>
+            <p><strong>Price:</strong> ₹999</p>
+            <p>
+                This casual shirt is made with premium cotton fabric,
+                perfect for daily wear and comfort.
+            </p>
+
+            <label for="size">Select Size:</label><br>
+            <select id="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select><br>
+
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true">
+        <div class="cart-modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+            <button id="close-cart" class="close">×</button>
+            <h3 id="cart-title">Your Cart</h3>
+            <div id="mini-cart"></div>
+            <div class="cart-actions"><button id="checkout-redirect">Go to Checkout</button></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 StyleHub. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
